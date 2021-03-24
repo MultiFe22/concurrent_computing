@@ -18,7 +18,13 @@ int main (void){
 		if (pthread_create(&tid[i-1], NULL, job, (void *)&ident[i-1])){ 
 			printf("ERROR -- pthread_create\n");
 		}
-	}	
+	}
+	//wait the other threads to end
+	for(int i=1; i<=NTHREADS; ++i){
+		if (pthread_join(tid[i-1], NULL)){ 
+			printf("ERROR -- pthread_create\n");
+		}
+	}
 	//print welcome
 	printf("Hi, this is the main thread!\n");
 	//separates main
