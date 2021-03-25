@@ -4,7 +4,7 @@
 #define NTHREADS 2
 #define ARRAYSIZE 10000
 
-
+int pos1, pos2 = 10000; //global variables to "sync" the threads
 
 void * arraysum (void * array){
 	int *p;
@@ -12,10 +12,11 @@ void * arraysum (void * array){
 	p = (int *) array;
 	printf("One thread initialized\n");
 	if(*p == 0){
-		while(*(p+count)!= 1) {
+		while(*(p+count)!= 1 && pos1+100 < pos2) { //this condition guarantees that the thread wich started first won't iterate over the same position as the second one
 			if (*(p+count) != 1){
 				*(p+count) +=1;
 				count +=1;
+				pos1 = count; //stores the value of the position so the code can sync both threads using pos1+100 < pos2
 
 			}
 		}
@@ -28,6 +29,7 @@ void * arraysum (void * array){
 			if (*(p+count) != 1){
 				*(p+count) +=1;
 				count -=1;
+				pos2 = count; //stores the value of the position so the code can sync both threads using pos1+100 < pos2
 
 			}
 		}
