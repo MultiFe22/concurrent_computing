@@ -98,4 +98,4 @@ int main(int argc, char *argv[])
 	return 0;
 }
 
-//Conclui que agrupando os numeros menores e somando eles de forma
+//Conclui que agrupando os numeros menores e somando eles consigo uma pequena melhora de precisão, mas quase ínfima
