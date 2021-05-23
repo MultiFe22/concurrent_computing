@@ -1,0 +1,3 @@
+D:/comp_conc/concurrent_computing/LAB_7/cmake-build-debug/CMakeFiles/LAB_7.dir
+D:/comp_conc/concurrent_computing/LAB_7/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/comp_conc/concurrent_computing/LAB_7/cmake-build-debug/CMakeFiles/rebuild_cache.dir

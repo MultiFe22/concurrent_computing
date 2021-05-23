@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/comp_conc/concurrent_computing/LAB_7/main.c
+stdio.h
+-
+stdlib.h
+-
+pthread.h
+-
+semaphore.h
+-
+
